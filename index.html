@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rameniku</title>
+    <link rel="icon" href="images/ramenlogo.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c2b020b549.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="images/ramenlogo.png" alt="">Rameniku</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon nav-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbarNavDropdown">
+            <ul class="nav fs-4 justify-content-end d-block d-md-flex">
+              <li class="nav-item text-center">
+                <a class="nav-link tablinks text-dark hover-underline-animation" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tablinks text-dark hover-underline-animation"  href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tablinks text-dark hover-underline-animation"  href="#projects">Projects</a> <!--onclick="appearPage(event, 'projects')"-->
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="row text-center">
+              <div class="col-md-6">
+                <img src="images/ramen.png" class="img-fluid ramen-img" alt="">
+              </div>
+              <div class="col-md-6 d-md-block m-auto text-main text-md-start text-dark">
+                <small class="mt-4">Are you hungry? Taste the</small>
+                <h1 class="mt-md-0 fw-bold">best <span>ramen</span> in town!</h1>
+                        <div class="icons">
+                        <a href="https://twitter.com/jsngmb" target="_blank" class="fa fa-twitter"></a>
+                        <a href="https://www.facebook.com/jasongamba14" target="_blank" class="fa fa-facebook"></a>
+                        <a href="https://www.instagram.com/jsngmb/" target="_blank" class="fa fa-instagram"></a>
+                        </div>
+              </div>
+            </div>
+        </div>
+    </main>
+    <!-- Messenger Chat Plugin Code -->
+    <div class="container">
+      <div id="fb-root"></div>
+
+      <!-- Your Chat Plugin code -->
+      <div id="fb-customer-chat" class="fb-customerchat">
+      </div>
+    </div>
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "108731661898331");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v14.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- <section class="services">
+      <div class="curved-div upper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#cc6d1e" fill-opacity="1" d="M0,224L80,208C160,192,320,160,480,170.7C640,181,800,235,960,234.7C1120,235,1280,181,1360,154.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+        </svg>
+      </div>  
+      <div class="curved-div">
+        <h1 class="fw-bold">Services</h1>
+        <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-4">
+            <i class="fa-solid fa-bowl-rice"></i>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis tempora molestias itaque maxime dignissimos delectus nulla unde debitis porro ullam exercitationem sit labore nemo suscipit, perspiciatis ratione atque, deleniti velit?</p>
+          </div>
+          <div class="col-md-4 mt-4 mt-md-0">
+            <i class="fa-solid fa-bowl-rice"></i>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis tempora molestias itaque maxime dignissimos delectus nulla unde debitis porro ullam exercitationem sit labore nemo suscipit, perspiciatis ratione atque, deleniti velit?</p>
+          </div>
+          <div class="col-md-4 mt-4 mt-md-0">
+            <i class="fa-solid fa-bowl-rice"></i>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis tempora molestias itaque maxime dignissimos delectus nulla unde debitis porro ullam exercitationem sit labore nemo suscipit, perspiciatis ratione atque, deleniti velit?</p>
+          </div>
+        </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#fff" fill-opacity="1" d="M0,224L80,208C160,192,320,160,480,170.7C640,181,800,235,960,234.7C1120,235,1280,181,1360,154.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+        </svg>
+      </div>  
+    </section>
+
+    <section class="vid">
+      <div class="container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/lp5XlUvGVNk?controls=0&autoplay=1&mute=1&loop=1&autohide=1&showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section> -->
+</body>
+</html>
