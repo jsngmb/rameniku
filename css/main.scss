@@ -31,11 +31,9 @@ body {
     font-family: 'Inter', sans-serif;
     color: var(--text);
     background:
-        linear-gradient(90deg, rgba(255, 194, 111, 0.05) 1px, transparent 1px),
         radial-gradient(circle at 0 30%, rgba(255, 138, 61, 0.18), transparent 20%),
         radial-gradient(circle at 100% 20%, rgba(255, 91, 46, 0.12), transparent 22%),
         linear-gradient(180deg, #120907 0%, #1b0f0a 48%, #100806 100%);
-    background-size: 72px 72px, auto, auto, auto;
 }
 
 a {
